@@ -1,33 +1,20 @@
-﻿生成启动时间为 2015/10/29 11:30:23。
-     1>项目“D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\uVision\uVision.vcxproj”在节点 2 上(build 个目标)。
+﻿生成启动时间为 2015/10/29 13:02:54。
+     1>项目“D:\studysoft\vs2010\vs2010练习\71_uVision\uVision_cjl\uVision\uVision\uVision.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\uVision.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        CustomBuild:
          所有输出均为最新。
        ClCompile:
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I.\GeneratedFiles /I. /ID:\Qt\4.8.6\include /I.\GeneratedFiles\Debug /ID:\Qt\4.8.6\include\QtCore /ID:\Qt\4.8.6\include\QtGui /ID:\Qt\4.8.6\include\QtHelp /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt videoinput.cpp
-         videoinput.cpp
+         所有输出均为最新。
          所有输出均为最新。
        Link:
-         d:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\\uVision.exe" /NOLOGO /LIBPATH:D:\Qt\4.8.6\lib opencv_calib3d2410d.lib opencv_contrib2410d.lib opencv_core2410d.lib opencv_features2d2410d.lib opencv_flann2410d.lib opencv_gpu2410d.lib opencv_highgui2410d.lib opencv_imgproc2410d.lib opencv_legacy2410d.lib opencv_objdetect2410d.lib opencv_ts2410d.lib opencv_video2410d.lib opencv_nonfree2410d.lib opencv_ocl2410d.lib opencv_photo2410d.lib opencv_stitching2410d.lib opencv_superres2410d.lib opencv_videostab2410d.lib qtmaind.lib QtCored4.lib QtGuid4.lib QtHelpd4.lib /MANIFEST /ManifestFile:"Debug\uVision.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\uVision.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\uVision.lib" /MACHINE:X86 Debug\moc_serialparameters.obj
-         Debug\moc_uvision.obj
-         Debug\moc_videoinput.obj
-         Debug\moc_videoproperty.obj
-         Debug\qrc_uvision.obj
-         Debug\main.obj
-         Debug\serialparameters.obj
-         Debug\uvision.obj
-         Debug\videoinput.obj
-         Debug\videoproperty.obj
-         LINK : 没有找到 D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\\uVision.exe 或上一个增量链接没有生成它；正在执行完全链接
-         uVision.vcxproj -> D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\uVision.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\Win32\Debug\\uVision.exe;#1" /manifest Debug\uVision.exe.intermediate.manifest
+         所有输出均为最新。
+         uVision.vcxproj -> D:\studysoft\vs2010\vs2010练习\71_uVision\uVision_cjl\uVision\Win32\Debug\uVision.exe
        FinalizeBuildStatus:
          正在删除文件“Debug\uVision.unsuccessfulbuild”。
          正在对“Debug\uVision.lastbuildstate”执行 Touch 任务。
-     1>已完成生成项目“D:\studysoft\vs2010\vs2010练习\71_uVision\uVision\uVision\uVision.vcxproj”(build 个目标)的操作。
+     1>已完成生成项目“D:\studysoft\vs2010\vs2010练习\71_uVision\uVision_cjl\uVision\uVision\uVision.vcxproj”(build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:08.39
+已用时间 00:00:00.15

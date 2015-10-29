@@ -1,3 +1,4 @@
+/*This is uVision_v1.0*/
 #include "uvision.h"
 #include <QtGui/QApplication>
 #include "videoinput.h"

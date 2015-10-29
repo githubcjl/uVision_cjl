@@ -32,7 +32,7 @@ VideoInput::VideoInput(QWidget *parent)
 
 void VideoInput::openCamera()
 {
-	 cap.open(1);
+	 cap.open(0);
 	if(!cap.isOpened())
 	{
 		exit(-1);
