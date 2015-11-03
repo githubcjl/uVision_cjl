@@ -22,7 +22,7 @@ static const uint qt_meta_data_uVision[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -33,6 +33,10 @@ static const uint qt_meta_data_uVision[] = {
        9,    8,    8,    8, 0x08,
       33,    8,    8,    8, 0x08,
       64,    8,    8,    8, 0x08,
+      87,    8,    8,    8, 0x09,
+      99,    8,    8,    8, 0x09,
+     123,  114,    8,    8, 0x09,
+     142,    8,    8,    8, 0x09,
 
        0        // eod
 };
@@ -40,7 +44,9 @@ static const uint qt_meta_data_uVision[] = {
 static const char qt_meta_stringdata_uVision[] = {
     "uVision\0\0on_actPlayBtn_clicked()\0"
     "on_actVideoParameter_clicked()\0"
-    "on_serialBtn_clicked()\0"
+    "on_serialBtn_clicked()\0openFiles()\0"
+    "deleteThread()\0filename\0showError(QString)\0"
+    "addThumbnail(QImage)\0"
 };
 
 void uVision::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -52,10 +58,13 @@ void uVision::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         case 0: _t->on_actPlayBtn_clicked(); break;
         case 1: _t->on_actVideoParameter_clicked(); break;
         case 2: _t->on_serialBtn_clicked(); break;
+        case 3: _t->openFiles(); break;
+        case 4: _t->deleteThread(); break;
+        case 5: _t->showError((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 6: _t->addThumbnail((*reinterpret_cast< QImage(*)>(_a[1]))); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObjectExtraData uVision::staticMetaObjectExtraData = {
@@ -90,9 +99,9 @@ int uVision::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 7;
     }
     return _id;
 }

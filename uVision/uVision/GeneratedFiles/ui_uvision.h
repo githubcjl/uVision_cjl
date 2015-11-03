@@ -47,6 +47,11 @@ public:
     QAction *actStop;
     QAction *actTakePhoto;
     QAction *actParameter;
+    QAction *actOpenImage;
+    QAction *actEnhance;
+    QAction *actResultAsave;
+    QAction *actMatch;
+    QAction *actSift;
     QWidget *centralWidget;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
@@ -80,6 +85,8 @@ public:
     QMenu *menu_F;
     QMenu *menu_E;
     QMenu *menu_V;
+    QMenu *menu_I;
+    QMenu *menu;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -87,7 +94,7 @@ public:
     {
         if (uVisionClass->objectName().isEmpty())
             uVisionClass->setObjectName(QString::fromUtf8("uVisionClass"));
-        uVisionClass->resize(288, 512);
+        uVisionClass->resize(789, 564);
         actNew = new QAction(uVisionClass);
         actNew->setObjectName(QString::fromUtf8("actNew"));
         actOpen = new QAction(uVisionClass);
@@ -116,6 +123,16 @@ public:
         actTakePhoto->setObjectName(QString::fromUtf8("actTakePhoto"));
         actParameter = new QAction(uVisionClass);
         actParameter->setObjectName(QString::fromUtf8("actParameter"));
+        actOpenImage = new QAction(uVisionClass);
+        actOpenImage->setObjectName(QString::fromUtf8("actOpenImage"));
+        actEnhance = new QAction(uVisionClass);
+        actEnhance->setObjectName(QString::fromUtf8("actEnhance"));
+        actResultAsave = new QAction(uVisionClass);
+        actResultAsave->setObjectName(QString::fromUtf8("actResultAsave"));
+        actMatch = new QAction(uVisionClass);
+        actMatch->setObjectName(QString::fromUtf8("actMatch"));
+        actSift = new QAction(uVisionClass);
+        actSift->setObjectName(QString::fromUtf8("actSift"));
         centralWidget = new QWidget(uVisionClass);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton = new QPushButton(centralWidget);
@@ -205,13 +222,17 @@ public:
         uVisionClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(uVisionClass);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 288, 23));
+        menuBar->setGeometry(QRect(0, 0, 789, 23));
         menu_F = new QMenu(menuBar);
         menu_F->setObjectName(QString::fromUtf8("menu_F"));
         menu_E = new QMenu(menuBar);
         menu_E->setObjectName(QString::fromUtf8("menu_E"));
         menu_V = new QMenu(menuBar);
         menu_V->setObjectName(QString::fromUtf8("menu_V"));
+        menu_I = new QMenu(menuBar);
+        menu_I->setObjectName(QString::fromUtf8("menu_I"));
+        menu = new QMenu(menu_I);
+        menu->setObjectName(QString::fromUtf8("menu"));
         uVisionClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(uVisionClass);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -223,6 +244,7 @@ public:
         menuBar->addAction(menu_F->menuAction());
         menuBar->addAction(menu_E->menuAction());
         menuBar->addAction(menu_V->menuAction());
+        menuBar->addAction(menu_I->menuAction());
         menu_F->addAction(actNew);
         menu_F->addAction(actOpen);
         menu_F->addAction(actClose);
@@ -236,6 +258,11 @@ public:
         menu_V->addAction(actPlay);
         menu_V->addSeparator();
         menu_V->addAction(actParameter);
+        menu_I->addAction(actOpenImage);
+        menu_I->addAction(menu->menuAction());
+        menu_I->addAction(actResultAsave);
+        menu->addAction(actMatch);
+        menu->addAction(actSift);
 
         retranslateUi(uVisionClass);
 
@@ -262,6 +289,11 @@ public:
         actStop->setText(QApplication::translate("uVisionClass", "\345\201\234\346\255\242", 0, QApplication::UnicodeUTF8));
         actTakePhoto->setText(QApplication::translate("uVisionClass", "\346\213\215\347\205\247", 0, QApplication::UnicodeUTF8));
         actParameter->setText(QApplication::translate("uVisionClass", "\350\247\206\351\242\221\345\261\236\346\200\247", 0, QApplication::UnicodeUTF8));
+        actOpenImage->setText(QApplication::translate("uVisionClass", "\346\211\223\345\274\200\345\233\276\345\203\217", 0, QApplication::UnicodeUTF8));
+        actEnhance->setText(QApplication::translate("uVisionClass", "\345\233\276\345\203\217\351\224\220\345\214\226", 0, QApplication::UnicodeUTF8));
+        actResultAsave->setText(QApplication::translate("uVisionClass", "\347\273\223\346\236\234\345\217\246\345\255\230", 0, QApplication::UnicodeUTF8));
+        actMatch->setText(QApplication::translate("uVisionClass", "\346\250\241\346\235\277\345\214\271\351\205\215", 0, QApplication::UnicodeUTF8));
+        actSift->setText(QApplication::translate("uVisionClass", "SIFT", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("uVisionClass", "\344\270\262\345\217\243\350\256\276\347\275\256", 0, QApplication::UnicodeUTF8));
         pushButton_2->setText(QApplication::translate("uVisionClass", "\345\205\263\351\227\255\344\270\262\345\217\243", 0, QApplication::UnicodeUTF8));
         pushButton_3->setText(QApplication::translate("uVisionClass", "\350\277\220\345\212\250\345\217\202\346\225\260", 0, QApplication::UnicodeUTF8));
@@ -291,6 +323,8 @@ public:
         menu_F->setTitle(QApplication::translate("uVisionClass", "\346\226\207\344\273\266(&F)", 0, QApplication::UnicodeUTF8));
         menu_E->setTitle(QApplication::translate("uVisionClass", "\350\256\276\345\244\207(&E)", 0, QApplication::UnicodeUTF8));
         menu_V->setTitle(QApplication::translate("uVisionClass", "\350\247\206\351\242\221(&V)", 0, QApplication::UnicodeUTF8));
+        menu_I->setTitle(QApplication::translate("uVisionClass", "\345\233\276\345\203\217\345\244\204\347\220\206(I)", 0, QApplication::UnicodeUTF8));
+        menu->setTitle(QApplication::translate("uVisionClass", "\347\256\227\346\263\225\351\200\211\346\213\251", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

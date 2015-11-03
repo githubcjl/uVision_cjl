@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>288</width>
-    <height>512</height>
+    <width>789</width>
+    <height>564</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -378,7 +378,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>288</width>
+     <width>789</width>
      <height>23</height>
     </rect>
    </property>
@@ -410,9 +410,25 @@
     <addaction name="separator"/>
     <addaction name="actParameter"/>
    </widget>
+   <widget class="QMenu" name="menu_I">
+    <property name="title">
+     <string>图像处理(I)</string>
+    </property>
+    <widget class="QMenu" name="menu">
+     <property name="title">
+      <string>算法选择</string>
+     </property>
+     <addaction name="actMatch"/>
+     <addaction name="actSift"/>
+    </widget>
+    <addaction name="actOpenImage"/>
+    <addaction name="menu"/>
+    <addaction name="actResultAsave"/>
+   </widget>
    <addaction name="menu_F"/>
    <addaction name="menu_E"/>
    <addaction name="menu_V"/>
+   <addaction name="menu_I"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -500,6 +516,31 @@
   <action name="actParameter">
    <property name="text">
     <string>视频属性</string>
+   </property>
+  </action>
+  <action name="actOpenImage">
+   <property name="text">
+    <string>打开图像</string>
+   </property>
+  </action>
+  <action name="actEnhance">
+   <property name="text">
+    <string>图像锐化</string>
+   </property>
+  </action>
+  <action name="actResultAsave">
+   <property name="text">
+    <string>结果另存</string>
+   </property>
+  </action>
+  <action name="actMatch">
+   <property name="text">
+    <string>模板匹配</string>
+   </property>
+  </action>
+  <action name="actSift">
+   <property name="text">
+    <string>SIFT</string>
    </property>
   </action>
  </widget>
