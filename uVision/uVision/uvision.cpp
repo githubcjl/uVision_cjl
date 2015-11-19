@@ -10,6 +10,7 @@
 #include <QMessageBox>
 
 
+
 uVision::uVision(QWidget *parent, Qt::WFlags flags)
 	: QMainWindow(parent, flags)
 {
@@ -19,22 +20,34 @@ uVision::uVision(QWidget *parent, Qt::WFlags flags)
 
 	waitseconds = 1;
 	QPalette pal = palette();
-	pal.setColor(QPalette::Background, Qt::white);
+	pal.setColor(QPalette::Background, Qt::gray);//设置窗口背景色
 	//setFixedSize(600,400);
 	//setWindowTitle("www.cuteqt.com");
-	previewwidget = new QWidget(this);	
+	pArea = new QScrollArea(this);
+	previewwidget = new QWidget(pArea);	
 	//previewwidget->setFixedSize(600,350);
 	previewwidget->setPalette(pal);
-	previewwidget->setAutoFillBackground(true);
-	previewwidget->setGeometry(300,55,480,460);
+	previewwidget->setAutoFillBackground(true);//自动填充窗口背景
+	previewwidget->setGeometry(300,50,480,460);//设置窗口位置及背景色
+
+	pArea->setWidget(previewwidget);
+	pArea->setGeometry(320,60,450,440);
+
+	//progress = new QProgressBar(this);
+	//progress->setGeometry(310,515,200,25);
+	//imageWatcher = new QFutureWatcher<QImage>(this);
+	//connect(imageWatcher,SIGNAL(progressRangeChanged(int,int)),progress,SLOT(setRange(int,int)));
+	//connect(imageWatcher,SIGNAL(progressValueChanged(int)),progress,SLOT(setValue(int)));
 	//QPushButton* btn = new QPushButton("Open pictures..", this);
 	//btn->setGeometry(450, 360, 130, 35);
-	connect(ui.actOpenImage, SIGNAL(triggered()), this, SLOT(openFiles()));
+	
+	connect(ui.actOpenImage, SIGNAL(triggered()), this, SLOT(on_openFiles_clicked()));
 	QGridLayout* layout = new QGridLayout(previewwidget);
 
 	connect(ui.actPlay,SIGNAL(triggered()),this,SLOT(on_actPlayBtn_clicked()));
 	connect(ui.actParameter,SIGNAL(triggered()),this,SLOT(on_actVideoParameter_clicked()));
 	connect(ui.pushButton,SIGNAL(clicked()),this,SLOT(on_serialBtn_clicked()));
+	connect(ui.actInstitch,SIGNAL(triggered()),this,SLOT(on_actImageInstitch_clicked()));
 }
 
 uVision::~uVision()
@@ -62,7 +75,16 @@ void uVision::on_serialBtn_clicked()
 	serial->show();
 }
 
-void uVision::openFiles()
+void uVision::on_actImageInstitch_clicked()
+{
+	//imagestitching *imagestitch = new imagestitching;
+	//imagestitch->show();
+
+	SiftMatch *s = new SiftMatch;
+	s->show();
+}
+
+void uVision::on_openFiles_clicked()
 {
 	waitseconds = 1;//reset
 	QStringList list = QFileDialog::getOpenFileNames(this, "Open one or more pictures", "", "*.jpg *.png *.bmp");
@@ -81,13 +103,19 @@ void uVision::openFiles()
 
 void uVision::createThumbnail(const QString& filename)
 {
-	qDebug() << filename;
+	//qDebug() << filename;
 	QThread* thread = new thumbnailthread(filename, 10 - waitseconds);
 	waitseconds ++;
+	connect(thread,SIGNAL(thumbnailFinishedInstitch(QImage)),this,SLOT(addInstitchImages(QImage)));
 	connect(thread, SIGNAL(thumbnailFinished(QImage)), this, SLOT(addThumbnail(QImage)));
 	connect(thread, SIGNAL(thumbnailFailed(const QString)), this, SLOT(showError(const QString)));
 	connect(thread, SIGNAL(finished()), this, SLOT(deleteThread()));
 	thread->start();
+}
+
+void uVision::addInstitchImages(QImage bigpm)
+{
+
 }
 
 void uVision::deleteThread()

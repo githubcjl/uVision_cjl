@@ -9,6 +9,12 @@
 #include <QWidget>
 #include <QTimer>
 #include <QImage>
+#include <QProgressBar>
+#include <QFutureWatcher>
+#include <QScrollArea>
+#include "imagestitching.h"
+#include <vector>
+#include "siftmatch.h"
 
 class QLabel;
 
@@ -26,15 +32,21 @@ private slots:
 	void on_actPlayBtn_clicked();
 	void on_actVideoParameter_clicked();
 	void on_serialBtn_clicked();
+	void on_actImageInstitch_clicked();
 protected slots:
-		void openFiles();
+		void on_openFiles_clicked();
 		void deleteThread();
 		void showError(const QString filename);
 		void addThumbnail(QImage);
+		void addInstitchImages(QImage);
+
 private:
 	void createThumbnail(const QString& filename);
 	QWidget* previewwidget;
 	int waitseconds;
+	QScrollArea *pArea;
+	//QProgressBar *progress;
+	//QFutureWatcher<QImage> *imageWatcher;
 };
 
 #endif // UVISION_H

@@ -414,16 +414,9 @@
     <property name="title">
      <string>图像处理(I)</string>
     </property>
-    <widget class="QMenu" name="menu">
-     <property name="title">
-      <string>算法选择</string>
-     </property>
-     <addaction name="actMatch"/>
-     <addaction name="actSift"/>
-    </widget>
     <addaction name="actOpenImage"/>
-    <addaction name="menu"/>
-    <addaction name="actResultAsave"/>
+    <addaction name="actInstitch"/>
+    <addaction name="actAsave"/>
    </widget>
    <addaction name="menu_F"/>
    <addaction name="menu_E"/>
@@ -541,6 +534,16 @@
   <action name="actSift">
    <property name="text">
     <string>SIFT</string>
+   </property>
+  </action>
+  <action name="actInstitch">
+   <property name="text">
+    <string>图像拼接</string>
+   </property>
+  </action>
+  <action name="actAsave">
+   <property name="text">
+    <string>结果另存</string>
    </property>
   </action>
  </widget>

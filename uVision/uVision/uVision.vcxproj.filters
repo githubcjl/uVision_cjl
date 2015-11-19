@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;cxx;c;def</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h</Extensions>
@@ -33,14 +29,11 @@
       <Extensions>cpp;moc</Extensions>
       <SourceControlFiles>False</SourceControlFiles>
     </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{362a82f7-f43d-4e07-859d-c1afa65d289b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="uvision.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_uvision.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
@@ -50,17 +43,11 @@
     <ClCompile Include="GeneratedFiles\qrc_uvision.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="videoinput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_videoinput.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_videoinput.cpp">
       <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="videoproperty.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_videoproperty.cpp">
       <Filter>Generated Files\Debug</Filter>
@@ -68,23 +55,80 @@
     <ClCompile Include="GeneratedFiles\Release\moc_videoproperty.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="serialparameters.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_serialparameters.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_serialparameters.cpp">
       <Filter>Generated Files\Release</Filter>
     </ClCompile>
-    <ClCompile Include="thumbnailthread.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GeneratedFiles\Debug\moc_thumbnailthread.cpp">
       <Filter>Generated Files\Debug</Filter>
     </ClCompile>
     <ClCompile Include="GeneratedFiles\Release\moc_thumbnailthread.cpp">
       <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imagestitching.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imagestitching.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_image_tools.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_image_tools.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="image_tools.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="imagestitching.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="serialparameters.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="thumbnailthread.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="uvision.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="videoinput.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="videoproperty.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_siftmatch.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_siftmatch.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="imgfeatures.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="kdtree.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="minpq.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="sift.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="siftmatch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.c">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="xform.c">
+      <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +162,21 @@
     <CustomBuild Include="thumbnailthread.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
+    <CustomBuild Include="imagestitching.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="imagestitching.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="image_tools.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="siftmatch.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="siftmatch.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GeneratedFiles\ui_uvision.h">
@@ -130,6 +189,30 @@
       <Filter>Generated Files</Filter>
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_serialparameters.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_imagestitching.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imgfeatures.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kdtree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="minpq.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sift.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="xform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_siftmatch.h">
       <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
