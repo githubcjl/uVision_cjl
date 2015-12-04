@@ -15,6 +15,10 @@
 #include "imagestitching.h"
 #include <vector>
 #include "siftmatch.h"
+#include "stdafx.h"
+#include <IDevice.h>
+//#include "Advance.h"
+//#include "SetupDlg.h"
 
 class QLabel;
 
@@ -39,12 +43,15 @@ protected slots:
 		void showError(const QString filename);
 		void addThumbnail(QImage);
 		void addInstitchImages(QImage);
-
+private:
+	static void CALLBACK InitReceiveDataProc2(LPVOID pDevice, BYTE *pImageBuffer, DeviceFrameInfo *pFrInfo, LPVOID lParam);
 private:
 	void createThumbnail(const QString& filename);
 	QWidget* previewwidget;
+	VideoInput *vi;
 	int waitseconds;
 	QScrollArea *pArea;
+	IDevice		*m_pDevice;
 	//QProgressBar *progress;
 	//QFutureWatcher<QImage> *imageWatcher;
 };

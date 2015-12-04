@@ -88,7 +88,7 @@ public:
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#5500ff;\">\345\217\252\350\203\275\346\211\223\345\274\2002\345\274\240\345\233\276\347\211\207,\345\267\246\345\217\263\351\241\272\345\272\217\344\273\273\346\204\217</span></p>\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#5500ff;\">\350\257\267\346\211\223\345\274\2002\345\274\240\345\233\276\347\211\207,\345\267\246\345\217\263\351\241\272\345\272\217\344\273\273\346\204\217</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#ff0000;\">\350\267\257\345\276\204\344\270\255\344\270\215\350\203\275\346\234\211\344\270\255\346\226\207</span></p></body></html>", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

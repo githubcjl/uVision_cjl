@@ -6,6 +6,7 @@
 #include "thumbnailthread.h"
 #include "siftmatch.h"
 #include <QTextCodec>
+#include "Advance.h"
 
 
 int picture_num = 0;
@@ -20,6 +21,9 @@ int main(int argc, char *argv[])
 
 	uVision w;
 	w.show();
+
+	//CAdvanceApp advanceapp;
+	//advanceapp.InitInstance();
 
 
 	return a.exec();

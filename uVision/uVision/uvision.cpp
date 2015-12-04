@@ -18,6 +18,10 @@ uVision::uVision(QWidget *parent, Qt::WFlags flags)
 	ui.setupUi(this);
 	setWindowTitle("uVision_v1.0");
 
+	IDevice::DeviceInitialSDK(NULL, FALSE);
+
+	
+
 	waitseconds = 1;
 	QPalette pal = palette();
 	pal.setColor(QPalette::Background, Qt::gray);//ÉèÖÃ´°¿Ú±³¾°É«
@@ -32,6 +36,18 @@ uVision::uVision(QWidget *parent, Qt::WFlags flags)
 
 	pArea->setWidget(previewwidget);
 	pArea->setGeometry(320,60,450,440);
+
+	vi = new VideoInput;
+
+	UionOpenDeviceParam param;
+	param.devIndex = 0;
+	DeviceStatus devStatus = IDevice::OpenDevice(param, &m_pDevice);
+	if(SUCCEEDED(devStatus)){
+		//devStatus = m_pDevice->DeviceInitEx(uVision::InitReceiveDataProc2, this, NULL, TRUE);
+		devStatus = m_pDevice->DeviceInit(vi->winId(), FALSE, TRUE);
+		if(SUCCEEDED(devStatus))
+			m_pDevice->DeviceCreateSettingPage(NULL);
+	}
 
 	//progress = new QProgressBar(this);
 	//progress->setGeometry(310,515,200,25);
@@ -52,20 +68,37 @@ uVision::uVision(QWidget *parent, Qt::WFlags flags)
 
 uVision::~uVision()
 {
-
+	if(m_pDevice != NULL){
+		m_pDevice->Stop();
+		m_pDevice->CloseDevice();
+		m_pDevice->DeviceUnInit();
+		m_pDevice->Release();
+		m_pDevice = NULL;
+	}
+	IDevice::DeviceUnInitialSDK();
 }
 
 void uVision::on_actPlayBtn_clicked()
 {
-	VideoInput *vi = new VideoInput;
+	if(m_pDevice != NULL) m_pDevice->Start();
 	vi->show();
 }
 
 void uVision::on_actVideoParameter_clicked()
 {
-	videoproperty *vp = new videoproperty;
+	//videoproperty *vp = new videoproperty;
+	//vp->show();
+
+	if(m_pDevice != NULL){
+
+		m_pDevice->DeviceShowSettingPage(TRUE);
+
+	}
+
+	//CAdvanceApp *advanceapp = new CAdvanceApp;
+	//advanceapp->InitInstance();
+	//CSetupDlg *setupDlg = new CSetupDlg;
 	
-	vp->show();
 }
 
 void uVision::on_serialBtn_clicked()
@@ -149,4 +182,16 @@ void uVision::addThumbnail(QImage smallpm)
 void uVision::showError(const QString filename)
 {
 	QMessageBox::information(this, "Error!", filename+" is not a valid picture file.");
+}
+
+
+void CALLBACK uVision::InitReceiveDataProc2(LPVOID pDevice, BYTE *pImageBuffer, DeviceFrameInfo *pFrInfo, LPVOID lParam)
+{
+	BYTE *pRGB24Buff = NULL;
+	if((pRGB24Buff = ((IDevice *)pDevice)->DeviceISP(pImageBuffer, pFrInfo)) != NULL){
+		//((CAdvanceDlg *)lParam)->ReceiveDataProc(pRGB24Buff, pFrInfo->uiWidth, pFrInfo->uiHeight);
+
+	}
+
+
 }

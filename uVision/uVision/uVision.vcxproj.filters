@@ -130,6 +130,33 @@
     <ClCompile Include="xform.c">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="Advance.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="AdvanceDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceInfoDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ExposeDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcessDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="OutputModeDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ROIDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SetupDlg.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="uvision.h">
@@ -214,6 +241,36 @@
     </ClInclude>
     <ClInclude Include="GeneratedFiles\ui_siftmatch.h">
       <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Advance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdvanceDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceInfoDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExposeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcessDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OutputModeDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ROIDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SetupDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

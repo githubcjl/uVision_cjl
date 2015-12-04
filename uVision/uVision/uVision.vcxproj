@@ -25,6 +25,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -71,11 +72,11 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\studysoft\GSL\GnuWin32\bin;D:\studysoft\GSL\gsl-64\bin;D:\studysoft\opencv2.4.10\opencv\build\x86\vc10\bin;$(ExecutablePath)</ExecutablePath>
     <ExecutablePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\studysoft\GSL\gsl-64\bin;D:\studysoft\opencv2.4.10\opencv\build\x86\vc10\bin;$(ExecutablePath)</ExecutablePath>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\studysoft\GSL\GnuWin32\include;D:\studysoft\GSL\gsl-64\include;D:\studysoft\GSL\gsl-64\include\gsl;D:\studysoft\opencv2.4.10\opencv\build\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\CGimagetech\Demo\VC++\Include;D:\studysoft\GSL\GnuWin32\include;D:\studysoft\GSL\gsl-64\include;D:\studysoft\GSL\gsl-64\include\gsl;D:\studysoft\opencv2.4.10\opencv\build\include;$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\studysoft\GSL\gsl-64\include;D:\studysoft\GSL\gsl-64\include\gsl;D:\studysoft\opencv2.4.10\opencv\build\include;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\studysoft\GSL\GnuWin32\lib;D:\studysoft\GSL\gsl-64\lib;D:\studysoft\opencv2.4.10\opencv\build\x86\vc10\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\CGimagetech\Demo\VC++\VS2005\Lib\Win32\Debug_Unicode;C:\Program Files %28x86%29\CGimagetech\Demo\VC++\VS2005\Lib\Win32\Debug;D:\studysoft\GSL\GnuWin32\lib;D:\studysoft\GSL\gsl-64\lib;D:\studysoft\opencv2.4.10\opencv\build\x86\vc10\lib;$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\studysoft\GSL\gsl-64\lib;D:\studysoft\opencv2.4.10\opencv\build\x86\vc10\lib;$(LibraryPath)</LibraryPath>
-    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">D:\studysoft\GSL\GnuWin32\lib;D:\studysoft\GSL\gsl-64\lib;$(ReferencePath)</ReferencePath>
+    <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\CGimagetech\Demo\VC++\VS2005\Lib\Win32\Debug_Unicode;C:\Program Files %28x86%29\CGimagetech\Demo\VC++\VS2005\Lib\Win32\Debug;D:\studysoft\GSL\GnuWin32\lib;D:\studysoft\GSL\gsl-64\lib;$(ReferencePath)</ReferencePath>
     <ReferencePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\studysoft\GSL\gsl-64\lib;$(ReferencePath)</ReferencePath>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateManifest>
   </PropertyGroup>
@@ -93,7 +94,7 @@
       <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>libgslcblas.lib;libgsl.lib;opencv_calib3d2410d.lib;opencv_contrib2410d.lib;opencv_core2410d.lib;opencv_features2d2410d.lib;opencv_flann2410d.lib;opencv_gpu2410d.lib;opencv_highgui2410d.lib;opencv_imgproc2410d.lib;opencv_legacy2410d.lib;opencv_objdetect2410d.lib;opencv_ts2410d.lib;opencv_video2410d.lib;opencv_nonfree2410d.lib;opencv_ocl2410d.lib;opencv_photo2410d.lib;opencv_stitching2410d.lib;opencv_superres2410d.lib;opencv_videostab2410d.lib;qtmaind.lib;QtCored4.lib;QtGuid4.lib;QtHelpd4.lib</AdditionalDependencies>
+      <AdditionalDependencies>CGDEVSDK.lib;libgslcblas.lib;libgsl.lib;opencv_calib3d2410d.lib;opencv_contrib2410d.lib;opencv_core2410d.lib;opencv_features2d2410d.lib;opencv_flann2410d.lib;opencv_gpu2410d.lib;opencv_highgui2410d.lib;opencv_imgproc2410d.lib;opencv_legacy2410d.lib;opencv_objdetect2410d.lib;opencv_ts2410d.lib;opencv_video2410d.lib;opencv_nonfree2410d.lib;opencv_ocl2410d.lib;opencv_photo2410d.lib;opencv_stitching2410d.lib;opencv_superres2410d.lib;opencv_videostab2410d.lib;qtmaind.lib;QtCored4.lib;QtGuid4.lib;QtHelpd4.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,6 +149,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Advance.cpp" />
+    <ClCompile Include="AdvanceDlg.cpp" />
+    <ClCompile Include="DeviceInfoDlg.cpp" />
+    <ClCompile Include="ExposeDlg.cpp" />
     <ClCompile Include="GeneratedFiles\Debug\moc_imagestitching.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
@@ -222,15 +227,25 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="ImageProcessDlg.cpp" />
     <ClCompile Include="imagestitching.cpp" />
     <ClCompile Include="image_tools.cpp" />
     <ClCompile Include="imgfeatures.c" />
     <ClCompile Include="kdtree.c" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="minpq.c" />
+    <ClCompile Include="OutputModeDlg.cpp" />
+    <ClCompile Include="ROIDlg.cpp" />
     <ClCompile Include="serialparameters.cpp" />
+    <ClCompile Include="SetupDlg.cpp" />
     <ClCompile Include="sift.c" />
     <ClCompile Include="siftmatch.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="thumbnailthread.cpp" />
     <ClCompile Include="utils.c" />
     <ClCompile Include="uvision.cpp" />
@@ -280,16 +295,26 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Advance.h" />
+    <ClInclude Include="AdvanceDlg.h" />
+    <ClInclude Include="DeviceInfoDlg.h" />
+    <ClInclude Include="ExposeDlg.h" />
     <ClInclude Include="GeneratedFiles\ui_imagestitching.h" />
     <ClInclude Include="GeneratedFiles\ui_serialparameters.h" />
     <ClInclude Include="GeneratedFiles\ui_siftmatch.h" />
     <ClInclude Include="GeneratedFiles\ui_uvision.h" />
     <ClInclude Include="GeneratedFiles\ui_videoinput.h" />
     <ClInclude Include="GeneratedFiles\ui_videoproperty.h" />
+    <ClInclude Include="ImageProcessDlg.h" />
     <ClInclude Include="imgfeatures.h" />
     <ClInclude Include="kdtree.h" />
     <ClInclude Include="minpq.h" />
+    <ClInclude Include="OutputModeDlg.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="ROIDlg.h" />
+    <ClInclude Include="SetupDlg.h" />
     <ClInclude Include="sift.h" />
+    <ClInclude Include="stdafx.h" />
     <ClInclude Include="utils.h" />
     <ClInclude Include="xform.h" />
     <CustomBuild Include="siftmatch.h">
